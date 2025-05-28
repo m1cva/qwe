@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qwe</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans text-black flex w-full flex-col items-center justify-center overflow-x-hidden">
+    <div class="flex w-[60%] flex-col justify-between items-center">
+        <header class="flex items-center w-full justify-between py-4">
+            <div class="hidden lg:flex flex-col text-12 text-gray">
+                <span>Магазины</span>
+                <span class="mt-1">8(800)707-09-21</span>
+            </div>
+            <div class="flex-1 flex justify-center">
+                <a href="./index.html"><img src="./img/logo.svg" alt="naumi logo" class="h-8" /></a>
+            </div>
+            <div class="flex items-center space-x-4 text-12 text-gray">
+                <button>
+     <img src="./img/search.svg" alt="">
+    </button>
+
+                <button>
+      <img src="./img/heart.svg" alt="">
+
+            </div>
+        </header>
+
+        <nav class="flex flex-wrap pt-2 pb-7 justify-center sm:justify-between w-full space-x-6 text-14 font-semibold tracking-wide uppercase mt-2">
+            <a href="./index.html" class="text-black">Главное</a>
+            <a href="./woman.html" class="text-black border-b-2 border-black">Женское</a>
+            <a href="#" class="text-black">Аксессуары</a>
+        </nav>
+    </div>
+    <div class="flex gap-10 w-full justify-center">
+   <div class="flex flex-col justify-between items-center gap-5 lg:flex-row lg:items-start w-[60%]">
+    <aside class="w-[100%] lg:w-[20%] shrink-0 space-y-6">
+    <details open class="group">
+      <summary class="cursor-pointer w-[80%] flex justify-start gap-2 items-center text-sm font-medium pb-2 border-b border-gray-300 group-open:mb-2">
+        <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+        Категория
+      </summary>
+      <ul class="pl-1 mt-1 space-y-2 text-sm">
+        <li><label><input type="checkbox" data-filter="category" value="Жилеты" class="mr-2">Жилеты</label></li>
+        <li><label><input type="checkbox" data-filter="category" value="Пальто" class="mr-2">Пальто</label></li>
+        <li><label><input type="checkbox" data-filter="category" value="Куртки" class="mr-2">Куртки</label></li>
+      </ul>
+    </details>
+
+    <details class="group">
+      <summary class="cursor-pointer w-[80%] flex justify-start gap-2 items-center text-sm font-medium pb-2 border-b border-gray-300 group-open:mb-2">
+        <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+        Размер
+      </summary>
+      <ul class="pl-1 mt-1 space-y-2 text-sm">
+        <li><label><input type="checkbox" data-filter="size" value="XS" class="mr-2">XS</label></li>
+        <li><label><input type="checkbox" data-filter="size" value="S" class="mr-2">S</label></li>
+        <li><label><input type="checkbox" data-filter="size" value="M" class="mr-2">M</label></li>
+        <li><label><input type="checkbox" data-filter="size" value="L" class="mr-2">L</label></li>
+      </ul>
+    </details>
+
+    <details class="group">
+      <summary class="cursor-pointer w-[80%] flex justify-start gap-2 items-center text-sm font-medium pb-2 border-b border-gray-300 group-open:mb-2">
+        <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+         Цвет
+      </summary>
+      <ul class="pl-1 mt-1 space-y-2 text-sm">
+        <li><label><input type="checkbox" data-filter="color" value="Белый" class="mr-2">Белый</label></li>
+        <li><label><input type="checkbox" data-filter="color" value="Черный" class="mr-2">Чёрный</label></li>
+        <li><label><input type="checkbox" data-filter="color" value="Бежевый" class="mr-2">Бежевый</label></li>
+      </ul>
+    </details>
+  </aside>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 flex-1">
+    <div data-category="Куртки" data-size="S" data-color="Белый" class="product-card relative group w-full max-w-[300px]">
+        <img src="./img/1photo.png" alt="Куртка" class="w-full h-[420px] object-cover group-hover:hidden transition duration-300" />
+
+        <div class="hidden group-hover:block">
+            <img src="./img/1photo.png" alt="Куртка" class="w-full h-[420px] object-cover" />
+            <div class="mt-2 flex items-center justify-center gap-2">
+                <div class="w-4 h-4 bg-black rounded-sm border border-gray-300"></div>
+            </div>
+
+            <div class="mt-4 text-center text-xs font-medium tracking-wide">ВЫБРАТЬ РАЗМЕР</div>
+            <div class="flex flex-wrap justify-center gap-2 mt-2 px-2">
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">40</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">42</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">44</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">46</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">48</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">50</button>
+            </div>
+
+            <div class="mt-4 flex justify-center gap-2 px-4">
+                <a href="./product.html">
+                    <button class="border border-black px-4 py-2 text-xs uppercase font-semibold hover:bg-black hover:text-white transition">Подробнее</button>
+                </a>
+                <button id="btn" onclick="toggleModal()" class="bg-black text-white px-4 py-2 text-xs uppercase font-semibold hover:opacity-90 transition">Купить</button>
+            </div>
+    </div>
+    <div id="popup-modal" class="fixed inset-0 hidden items-center justify-center bg-white bg-opacity-50 z-50">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-md p-6 relative">
+            <button onclick="toggleModal()" class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            <h2 class="text-xl font-semibold mb-4 text-gray-800">Введите данные</h2>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Адрес</label>
+                    <input type="text" placeholder="Ваш адрес" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Telegram</label>
+                    <input type="text" placeholder="@username" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Телефон</label>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" placeholder="you@example.com" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">
+            Отправить
+          </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="mt-4 text-center">
+        <div class="text-lg font-medium">47 489 руб.</div>
+        <div class="text-sm text-gray-500 mt-1">Куртка</div>
+    </div>
+    </div>
+    <div data-category="Пальто" data-size="S" data-color="Белый" class="product-card relative group w-full max-w-[300px]">
+        <img src="./img/1photo.png" alt="Куртка" class="w-full h-[420px] object-cover group-hover:hidden transition duration-300" />
+
+        <div class="hidden group-hover:block">
+            <img src="./img/1photo.png" alt="Куртка" class="w-full h-[420px] object-cover" />
+            <div class="mt-2 flex items-center justify-center gap-2">
+                <div class="w-4 h-4 bg-black rounded-sm border border-gray-300"></div>
+            </div>
+
+            <div class="mt-4 text-center text-xs font-medium tracking-wide">ВЫБРАТЬ РАЗМЕР</div>
+            <div class="flex flex-wrap justify-center gap-2 mt-2 px-2">
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">40</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">42</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">44</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">46</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">48</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">50</button>
+            </div>
+
+            <div class="mt-4 flex justify-center gap-2 px-4">
+                <a href="./product.html">
+                    <button class="border border-black px-4 py-2 text-xs uppercase font-semibold hover:bg-black hover:text-white transition">Подробнее</button>
+                </a>
+                <button id="btn" onclick="toggleModal()" class="bg-black text-white px-4 py-2 text-xs uppercase font-semibold hover:opacity-90 transition">Купить</button>
+            </div>
+    </div>
+    <div id="popup-modal" class="fixed inset-0 hidden items-center justify-center bg-white bg-opacity-50 z-50">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-md p-6 relative">
+            <button onclick="toggleModal()" class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            <h2 class="text-xl font-semibold mb-4 text-gray-800">Введите данные</h2>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Адрес</label>
+                    <input type="text" placeholder="Ваш адрес" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Telegram</label>
+                    <input type="text" placeholder="@username" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Телефон</label>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" placeholder="you@example.com" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">
+            Отправить
+          </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="mt-4 text-center">
+        <div class="text-lg font-medium">47 489 руб.</div>
+        <div class="text-sm text-gray-500 mt-1">Куртка</div>
+    </div>
+    </div>
+    <div data-category="Жилеты" data-size="S" data-color="Белый" class="product-card relative group w-full max-w-[300px]">
+        <img src="./img/1photo.png" alt="Куртка" class="w-full h-[420px] object-cover group-hover:hidden transition duration-300" />
+
+        <div class="hidden group-hover:block">
+            <img src="./img/1photo.png" alt="Куртка" class="w-full h-[420px] object-cover" />
+            <div class="mt-2 flex items-center justify-center gap-2">
+                <div class="w-4 h-4 bg-black rounded-sm border border-gray-300"></div>
+            </div>
+
+            <div class="mt-4 text-center text-xs font-medium tracking-wide">ВЫБРАТЬ РАЗМЕР</div>
+            <div class="flex flex-wrap justify-center gap-2 mt-2 px-2">
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">40</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">42</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">44</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">46</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">48</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">50</button>
+            </div>
+
+            <div class="mt-4 flex justify-center gap-2 px-4">
+                <a href="./product.html">
+                    <button class="border border-black px-4 py-2 text-xs uppercase font-semibold hover:bg-black hover:text-white transition">Подробнее</button>
+                </a>
+                <button id="btn" onclick="toggleModal()" class="bg-black text-white px-4 py-2 text-xs uppercase font-semibold hover:opacity-90 transition">Купить</button>
+            </div>
+    </div>
+    <div id="popup-modal" class="fixed inset-0 hidden items-center justify-center bg-white bg-opacity-50 z-50">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-md p-6 relative">
+            <button onclick="toggleModal()" class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            <h2 class="text-xl font-semibold mb-4 text-gray-800">Введите данные</h2>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Адрес</label>
+                    <input type="text" placeholder="Ваш адрес" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Telegram</label>
+                    <input type="text" placeholder="@username" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Телефон</label>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" placeholder="you@example.com" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">
+            Отправить
+          </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="mt-4 text-center">
+        <div class="text-lg font-medium">47 489 руб.</div>
+        <div class="text-sm text-gray-500 mt-1">Куртка</div>
+    </div>
+    </div>
+    <div data-category="Жилеты" data-size="S" data-color="Бежевый" class="product-card relative group w-full max-w-[300px]">
+        <img src="./img/1photo.png" alt="Куртка" class="w-full h-[420px] object-cover group-hover:hidden transition duration-300" />
+
+        <div class="hidden group-hover:block">
+            <img src="./img/1photo.png" alt="Куртка" class="w-full h-[420px] object-cover" />
+            <div class="mt-2 flex items-center justify-center gap-2">
+                <div class="w-4 h-4 bg-black rounded-sm border border-gray-300"></div>
+            </div>
+
+            <div class="mt-4 text-center text-xs font-medium tracking-wide">ВЫБРАТЬ РАЗМЕР</div>
+            <div class="flex flex-wrap justify-center gap-2 mt-2 px-2">
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">40</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">42</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">44</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">46</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">48</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">50</button>
+            </div>
+
+            <div class="mt-4 flex justify-center gap-2 px-4">
+                <a href="./product.html">
+                    <button class="border border-black px-4 py-2 text-xs uppercase font-semibold hover:bg-black hover:text-white transition">Подробнее</button>
+                </a>
+                <button id="btn" onclick="toggleModal()" class="bg-black text-white px-4 py-2 text-xs uppercase font-semibold hover:opacity-90 transition">Купить</button>
+            </div>
+    </div>
+    <div id="popup-modal" class="fixed inset-0 hidden items-center justify-center bg-white bg-opacity-50 z-50">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-md p-6 relative">
+            <button onclick="toggleModal()" class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            <h2 class="text-xl font-semibold mb-4 text-gray-800">Введите данные</h2>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Адрес</label>
+                    <input type="text" placeholder="Ваш адрес" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Telegram</label>
+                    <input type="text" placeholder="@username" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Телефон</label>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" placeholder="you@example.com" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">
+            Отправить
+          </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="mt-4 text-center">
+        <div class="text-lg font-medium">47 489 руб.</div>
+        <div class="text-sm text-gray-500 mt-1">Куртка</div>
+    </div>
+    </div>
+    <div data-category="Куртки" data-size="M" data-color="Черный" class="product-card relative group w-full max-w-[300px]">
+        <img src="./img/1photo.png" alt="Пуховое пальто" class="w-full h-[420px] object-cover group-hover:hidden transition duration-300" />
+
+        <div class="hidden group-hover:block">
+            <img src="./img/1photo.png" alt="Пуховое пальто" class="w-full h-[420px] object-cover" />
+            <div class="mt-2 flex items-center justify-center gap-2">
+                <div class="w-4 h-4 bg-black rounded-sm border border-gray-300"></div>
+            </div>
+
+            <div class="mt-4 text-center text-xs font-medium tracking-wide">ВЫБРАТЬ РАЗМЕР</div>
+            <div class="flex flex-wrap justify-center gap-2 mt-2 px-2">
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">40</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">42</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">44</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">46</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">48</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">50</button>
+            </div>
+
+            <div class="mt-4 flex justify-center gap-2 px-4">
+                <a href="./product.html">
+                    <button class="border border-black px-4 py-2 text-xs uppercase font-semibold hover:bg-black hover:text-white transition">Подробнее</button>
+                </a>
+                <button id="btn" onclick="toggleModal()" class="bg-black text-white px-4 py-2 text-xs uppercase font-semibold hover:opacity-90 transition">Купить</button>
+            </div>
+        </div>
+        <div id="popup-modal" class="fixed inset-0 hidden items-center justify-center bg-white bg-opacity-50 z-50">
+            <div class="bg-white rounded-2xl shadow-xl w-full max-w-md p-6 relative">
+                <button onclick="toggleModal()" class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+                <h2 class="text-xl font-semibold mb-4 text-gray-800">Введите данные</h2>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Адрес</label>
+                        <input type="text" placeholder="Ваш адрес" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Telegram</label>
+                        <input type="text" placeholder="@username" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Телефон</label>
+                        <input type="tel" placeholder="+7 (___) ___-__-__" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" placeholder="you@example.com" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                    </div>
+                    <div class="flex justify-end">
+                        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">
+            Отправить
+          </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-4 text-center">
+            <div class="text-lg font-medium">47 489 руб.</div>
+            <div class="text-sm text-gray-500 mt-1">Пуховое пальто</div>
+        </div>
+    </div>
+    <div data-category="Куртки" data-size="L" data-color="Бежевый" class="product-card relative group w-full max-w-[300px]">
+        <img src="./img/1photo.png" alt="Жилетка" class="w-full h-[420px] object-cover group-hover:hidden transition duration-300" />
+
+        <div class="hidden group-hover:block">
+            <img src="./img/1photo.png" alt="Жилетка" class="w-full h-[420px] object-cover" />
+            <div class="mt-2 flex items-center justify-center gap-2">
+                <div class="w-4 h-4 bg-black rounded-sm border border-gray-300"></div>
+            </div>
+
+            <div class="mt-4 text-center text-xs font-medium tracking-wide">ВЫБРАТЬ РАЗМЕР</div>
+            <div class="flex flex-wrap justify-center gap-2 mt-2 px-2">
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">40</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">42</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">44</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">46</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">48</button>
+                <button class="w-9 h-9 border border-black text-sm font-semibold hover:bg-black hover:text-white transition">50</button>
+            </div>
+
+            <div class="mt-4 flex justify-center gap-2 px-4">
+                <a href="./product.html">
+                    <button class="border border-black px-4 py-2 text-xs uppercase font-semibold hover:bg-black hover:text-white transition">Подробнее</button>
+                </a>
+                <button id="btn" onclick="toggleModal()" class="bg-black text-white px-4 py-2 text-xs uppercase font-semibold hover:opacity-90 transition">Купить</button>
+            </div>
+        </div>
+        <div id="popup-modal" class="fixed inset-0 hidden items-center justify-center bg-white bg-opacity-50 z-50">
+            <div class="bg-white rounded-2xl shadow-xl w-full max-w-md p-6 relative">
+                <button onclick="toggleModal()" class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+                <h2 class="text-xl font-semibold mb-4 text-gray-800">Введите данные</h2>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Адрес</label>
+                        <input type="text" placeholder="Ваш адрес" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Telegram</label>
+                        <input type="text" placeholder="@username" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Телефон</label>
+                        <input type="tel" placeholder="+7 (___) ___-__-__" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" placeholder="you@example.com" class="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" />
+                    </div>
+                    <div class="flex justify-end">
+                        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">
+            Отправить
+          </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-4 text-center">
+            <div class="text-lg font-medium">47 489 руб.</div>
+            <div class="text-sm text-gray-500 mt-1">Жилетка</div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    <section class="w-full py-10">
+        <div class="w-[60%] mx-auto flex flex-col lg:flex-row justify-between gap-8">
+
+            <div class="flex flex-col text-[14px] text-gray-700">
+                <h3 class="uppercase text-[12px] tracking-widest mb-4">Контакты</h3>
+
+                <div class="flex items-center mb-3">
+                    <img src="./img/contact1.svg" alt="Магазины" class="w-4 h-4 mr-2" />
+                    <span class="border-b border-gray-400 pb-[1px]">Магазины</span>
+                </div>
+
+                <div class="flex items-center mb-3">
+                    <img src="./img/contact2.svg" alt="Телефон" class="w-4 h-4 mr-2" />
+                    <div class="flex flex-col leading-tight">
+                        <span>+7(999)999-99-99</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <img src="./img/contact3.svg" alt="Email" class="w-4 h-4 mr-2" />
+                    <span>shop@amere.ru</span>
+                </div>
+            </div>
+
+            <div class="bg-[#E8E3E2] p-6 flex-1 text-gray-700">
+                <h3 class="uppercase text-center text-[22px] tracking-wider font-light">
+                    Подпишитесь<br /> на новости Amére
+                </h3>
+                <p class="text-center text-[16px] mt-2 mb-4">
+                    Первыми узнавайте о новинках<br /> и трендах сезона.
+                </p>
+
+                <form class="flex flex-col sm:flex-row items-center justify-center gap-2 mb-3">
+                    <input type="email" placeholder="Ваш e-mail" class="px-4 py-2 w-full sm:w-64 text-sm text-gray-800 rounded focus:outline-none" />
+                    <button type="submit" class="bg-black text-white text-[16px] px-4 h-[36px] rounded w-full sm:w-auto">
+          Подписаться
+        </button>
+                </form>
+
+                <p class="text-[11px] text-center text-gray-500">
+                    Нажимая "Подписаться" вы даёте согласие на
+                    <a href="#" class="underline">обработку персональных данных</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-white border-t border-gray-200 text-[13px] text-gray- w-screen">
+        <div class="w-[60%] mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div>
+                <div class="uppercase text-[12px] font-bold tracking-widest mb-2">Новости</div>
+                <a href="#" class="block mb-6 hover:underline font-light">Новости</a>
+                <img src="./img/logo.svg" alt="NAUMI" class="w-24" />
+            </div>
+
+            <div>
+                <div class="uppercase text-[12px] tracking-widest font-bold mb-2">Покупателю</div>
+                <ul class="space-y-[2px] leading-relaxed font-light">
+                    <li><a href="#" class="hover:underline">Оплата</a></li>
+                    <li><a href="#" class="hover:underline">Гарантия качества</a></li>
+                    <li><a href="#" class="hover:underline">Условия доставки</a></li>
+                    <li><a href="#" class="hover:underline">Условия обмена и возврата</a></li>
+                    <li><a href="#" class="hover:underline">Условия продажи</a></li>
+                    <li><a href="#" class="hover:underline">Условия самовывоза</a></li>
+                    <li><a href="#" class="hover:underline">Контакты</a></li>
+                    <li><a href="#" class="hover:underline">Как оплатить по частям</a></li>
+                    <li><a href="#" class="hover:underline">Помощь</a></li>
+                    <li><a href="#" class="hover:underline">Карта сайта</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="uppercase text-[12px] tracking-widest font-bold mb-2">Мы в социальных сетях</div>
+
+                <div class="uppercase text-[12px] tracking-widest mt-6 mb-2">Адреса магазинов</div>
+                <div class="flex gap-2 flex-col text-gray-800 text-[13px] mb-2 font-light">
+                    <button class="hover:underline text-start">г. Тольятти ТЦ СОЛНЕЧНЫЙ</button>
+                    <button class="hover:underline text-start">г. Тольятти ТД ВИЗИТ</button>
+                </div>
+
+                <img src="./img/rate.png" alt="Яндекс рейтинг" class="w-32 mt-2" />
+            </div>
+        </div>
+
+        <div class="bg-[#f6f6f6] text-[12px] text-gray-500 border-t border-gray-200 py-3 px-4 flex flex-col md:flex-row justify-between items-center gap-2">
+            <span>Официальный интернет-магазин</span>
+            <span>&copy; Amére 2015–25. All Rights reserved | 2025</span>
+            <div class="flex gap-3">
+                <a href="#" class="hover:underline">Политика конфиденциальности</a>
+                <a href="#" class="hover:underline">Согласие на обработку персональных данных</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleModal() {
+            const modal = document.getElementById('popup-modal');
+            if (modal.classList.contains('hidden')) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            } else {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"][data-filter]');
+        const cards = document.querySelectorAll('.product-card');
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', applyFilters);
+        });
+
+        function applyFilters() {
+            const filters = {
+            category: getCheckedValues('category'),
+            size: getCheckedValues('size'),
+            color: getCheckedValues('color'),
+            };
+
+            cards.forEach(card => {
+            const cardCategory = card.dataset.category;
+            const cardSize = card.dataset.size;
+            const cardColor = card.dataset.color;
+
+            const matchCategory = filters.category.length === 0 || filters.category.includes(cardCategory);
+            const matchSize = filters.size.length === 0 || filters.size.includes(cardSize);
+            const matchColor = filters.color.length === 0 || filters.color.includes(cardColor);
+
+            if (matchCategory && matchSize && matchColor) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+            });
+        }
+
+        function getCheckedValues(filterType) {
+            return Array.from(document.querySelectorAll(`input[data-filter="${filterType}"]:checked`))
+            .map(input => input.value);
+        }
+        });
+    </script>
+</body>
+
+</html>
