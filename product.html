@@ -10,34 +10,42 @@
 </head>
 
 <body class="font-sans text-black flex w-full flex-col items-center justify-center overflow-x-hidden">
-    <div class="flex w-[60%] flex-col justify-between items-center">
+    <div class="flex w-[90%] lg:w-[60%] flex-col pb-6 justify-between items-center">
         <header class="flex items-center w-full justify-between py-4">
-            <div class="hidden lg:flex flex-col text-12 text-gray">
+
+            <div class="hidden sm:flex flex-col text-12 text-gray">
                 <span>Магазины</span>
                 <span class="mt-1">8(800)707-09-21</span>
             </div>
-            <div class="flex-1 flex justify-center">
+
+            <div class="flex-1 flex sm:justify-center">
                 <a href="./index.html"><img src="./img/logo.svg" alt="naumi logo" class="h-8" /></a>
             </div>
+
             <div class="flex items-center space-x-4 text-12 text-gray">
-                <button>
-     <img src="./img/search.svg" alt="">
-    </button>
-
-                <button>
-      <img src="./img/heart.svg" alt="">
-
+        <div class="flex-col flex items-center">
+            <a href="./reg.html">Регистрация</a>
+            <div class="bg-black border-solid border-[1px] w-full"></div>
+            <a href="./log.html">Войти</a>
+        </div>
+                <a href="profile.html">
+     <img src="./img/profile.svg" alt="">
+                </a>
+        <a href="./cart.html">
+      <img src="./img/cartt.svg" alt="">
+        </a>
             </div>
         </header>
 
-        <nav class="flex pt-2 pb-7 flex-wrap justify-center sm:justify-between w-full space-x-6 text-14 font-semibold tracking-wide uppercase mt-2">
-            <a href="./index.html" class="text-black">Главное</a>
-            <a href="./woman.html" class="text-black border-b-2 border-black">Женское</a>
-            <a href="#" class="text-black">Аксессуары</a>
+        <nav class="flex pt-2 justify-between w-full space-x-6 sm:text-base text-sm font-semibold tracking-wide uppercase mt-2">
+            <a href="./index.html" class="text-black border-b-2 border-black">Главное</a>
+            <a href="./woman.html" class="text-black">Женское</a>
+            <a href="./aksesuari.html" class="text-black">Аксессуары</a>
+            <a href="./news.html" class="text-black">Новости</a>
         </nav>
     </div>
 
-<div class="w-[60%] mx-auto flex flex-col lg:flex-row gap-8 pb-8">
+<div class="w-[80%] lg:w-[60%] mx-auto flex flex-col lg:flex-row gap-8 pb-8">
     <div class="flex w-full lg:w-[50%] gap-4">
         <div class="flex flex-col space-y-4 w-[14%]">
         <img src="./img/preview5.png" data-full="./img/preview5.png" class="thumbnail border-2 border-black cursor-pointer" alt="preview 1" />
@@ -119,7 +127,7 @@
     </div>
 
     <footer class="bg-white border-t border-gray-200 text-[13px] text-gray- w-screen">
-        <div class="w-[60%] mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="w-[90%] lg:w-[60%] mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
 
             <div>
                 <div class="uppercase text-[12px] font-bold tracking-widest mb-2">Новости</div>
@@ -152,7 +160,7 @@
                     <button class="hover:underline text-start">г. Тольятти ТД ВИЗИТ</button>
                 </div>
 
-                <img src="../img/rate.png" alt="Яндекс рейтинг" class="w-32 mt-2" />
+                <img src="./img/rate.png" alt="Яндекс рейтинг" class="w-32 mt-2" />
             </div>
         </div>
 

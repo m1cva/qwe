@@ -3,11 +3,11 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                'gray': '#ADADAD',
+                gray: '#ADADAD',
             },
             screens: {
-                'xl': '1500px',
-                'l': '800px',
+                'll': '800px',
+                '3xl': '1500px',
             },
         },
     },
